@@ -1,0 +1,33 @@
+                                                    Relazione sul codice 
+
+Il programma a noi fornito una volta eseguito per prima cosa farà all'utente la domanda 'Cosa vuoi sapere?' quindi l'utente può inserire delle domande come ad esempio: 'Quale è la data di oggi?' o 'Che ore sono?'. Successivamente il programma analizza l'input dell'utente e in base al comando richiesto restituisce una risposta.
+Ad esempio se la domanda dell'utente è: 'Quale è la data di oggi? il programma risponderà con la data in cui viene eseguito lo stesso.
+Se invece la domanda dell'utente è: ' Che ore sono?' il programma risponderà con l'orario nel formato Ora : Minuti.
+Il fatto che il programma riesca a restituire la data e l'ora in base alla richiesta dell'utente è da attribuire all'importazione della libreria datetime, come possiamo vedere all'inizio del codice.  
+Inoltre il programma può rispondere anche alla domanda dell'utente 'Come ti chiami?' che in questo caso riceverà la risposta: 'Mi chiamo Assistente Virtuale', tutti gli altri input daranno come risposta: 'Non ho capito la domanda'.
+Poi nella parte finale del codice si può notare l'uso del while true che permette al programma l'instaurazione di un ciclo che chiederà all'utente 'Cosa vuoi sapere?' fino a quando non verrà inserito l'input 'esci' che restituisce 'Arrivederci' e rompe il ciclo.
+
+
+Il codice sorgente non è abilitato a riconoscere input diversi dalle tre domande predefinite e qualsiasi altro input ha come risposta 'Non ho capito la domanda'.
+Inoltre non è abilitato nemmeno al riconoscimento di maiuscole e minuscole quindi se la domanda non è formulata bene questo non la riconoscerà.
+
+
+Il codice presentava alcuni errori:
+
+1.Nel primo if era stata usata la funzione datetime.datetoday(), che non esiste ed è quindi stata sostituita da quella corretta che 
+  è datetime.datetime.today()
+
+
+2.Dopo il While true mancavano i : che sono stati aggiunti
+
+Inoltre il codice è stato implementato con il comando.lower per poter gestire eventuali input dell'utente senza problematiche di 
+maiuscole o minuscole.
+
+
+P.S. Mi sono documentato sulla concatenazione delle stringhe con il + ed è corretta ma si potrebbero utilizzare le {} per inserire variabili           
+     all'interno della stringa che poi va restituita all'utente.
+     Ad esempio la linea: risposta = 'L'ora attauale è ' + ora_attuale.strftime("%H:%M") potrebbe diventare
+     risposta = f'L'ora attuale è {ora_attuale.strftime("%H:%M")}'
+
+
+
